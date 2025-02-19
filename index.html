@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WA Number Unbanned</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>WA NUMBER UNBANNED</h1>
+        <input type="text" id="phoneNumber" placeholder="Enter Your Number" required>
+        <button onclick="sendEmail()">SUBMIT</button>
+        <p class="powered">© POWERED BY <br> <span class="highlight">CYBER <i>FROLY</i> </span> </p>
+    </div>
+
+    <script>
+        function sendEmail() {
+            var number = document.getElementById("phoneNumber").value;
+            if (number.trim() !== "") {
+                var emailSubject = "Request for Review: Suspended WhatsApp Account";
+                var emailBody = "Hallo WhatsApp-Team,%0A%0A" +
+                                "Ich möchte eine Beschwerde bezüglich meines gesperrten WhatsApp-Kontos einreichen. " +
+                                "Ich habe große Schwierigkeiten, weil ich nicht auf mein WhatsApp-Konto zugreifen kann, " +
+                                "obwohl ich diese Anwendung schon lange verwende und die von WhatsApp bereitgestellten Nutzungsbedingungen verstehe.%0A%0A" +
+                                "Meine WhatsApp-Nummer ist: " + number + "%0A%0A" +
+                                "Ich hoffe, das WhatsApp-Team kann mir helfen, dieses Problem schnell zu lösen und mein WhatsApp-Konto zu entsperren.%0A%0A" +
+                                "Vielen Dank für Ihre Aufmerksamkeit und ich hoffe, bald gute Neuigkeiten vom WhatsApp-Team zu hören.";
+
+                var mailtoLink = "mailto:android@whatsapp.com,android@support.whatsapp.com,android_web@support.whatsapp.com,support@support.whatsapp.com,jan@whatsapp.com,smb@support.whatsapp.com" +
+                                 "?subject=" + encodeURIComponent(emailSubject) +
+                                 "&body=" + encodeURIComponent(emailBody);
+
+                window.location.href = mailtoLink;
+            } else {
+                alert("Please enter a valid WhatsApp number!");
+            }
+        }
+    </script>
+</body>
+</html>
